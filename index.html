@@ -12,7 +12,28 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </head>
 <body class="w3-light-grey">
   
-<iframe src="https://pllrz.zappar.io/5991077944973498092/5.0.7/" style="position: absolute; height: 500px; width: 90%;" allow="camera; microphone"></iframe>
+<button onclick="playVid()" type="button">Play Video</button>
+<button onclick="pauseVid()" type="button">Pause Video</button><br> 
+
+<video id="myVideo" width="320" height="176" controls>
+  <source src="https://5c35c0ac-a38f-4fe8-bb98-0d61045c3c5e.client-api.unity3dusercontent.com/client_api/v1/buckets/c40d6e47-87b8-4f49-9667-394db16423bb/entries/34ba1ca6-8330-422d-b18c-347360c54ad4/versions/68ade2a0-3655-4f77-aa01-c3d9d408688b/content/">
+  Your browser does not support HTML5 video.
+</video>
+  
+<script> 
+var vid = document.getElementById("myVideo"); 
+
+function playVid() { 
+  vid.play(); 
+} 
+
+function pauseVid() { 
+  vid.pause(); 
+} 
+</script> 
+
+  
+<iframe src="https://pllrz.zappar.io/5991077944973498092/5.0.7/" style="position: absolute; height: 500px; width: 100%;" allow="camera; microphone"></iframe>
 <div style="height: 500px; width: 100%;" ></div>
 
 <!-- w3-content defines a container for fixed size centered content, 
