@@ -12,6 +12,30 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </head>
 <body class="w3-light-grey">
   
+  <button onclick="askPermission()">click me</button>
+        <video></video>
+  
+<script> 
+  function askPermission(){
+
+         //add constraints object
+         var constraints = {
+             audio:true,
+             video:true};
+
+         //call getUserMedia
+         navigator.mediaDevices.getUserMedia(constraints).then(function(mediaStream){
+
+             var video = document.querySelector('video');
+             video.srcObject = mediaStream;
+             video.play();
+             }).catch(function(err){
+                 console.log("There's an error!" + err.message);
+             })
+
+     }
+</script> 
+  
 <button onclick="playVid()" type="button">Play Video</button>
 <button onclick="pauseVid()" type="button">Pause Video</button><br> 
 
